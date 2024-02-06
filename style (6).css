@@ -1,0 +1,369 @@
+
+body {
+      width: 100%;
+      padding: 0;
+      margin: 0;
+      background-color :#C7C4D5;
+      font-family: "Droid Arabic Kufi";
+
+
+    }
+   
+    main {
+      width :100%;
+      display: grid;
+      grid-template-columns: 15% 70% 15%;
+      grid-template-rows: auto auto auto;
+      height: auto;
+      padding-top :50px ;
+      gap: 5px;
+    }
+.item:hover .image,
+.item:focus .image,
+.item:hover .text,
+.item:focus .text {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.item:hover .text,
+.item:focus .text {
+  opacity: 1;
+}
+.item {
+  position: relative;
+  overflow: hidden;
+}
+
+.image {
+  width: 98%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+a {
+  color: #007bff; /* لون الرابط */
+  text-decoration: none; /* إزالة التزيين الافتراضي للرابط */
+  transition: color 0.3s ease; /* تحويل لون الرابط بسلاسة عند التحويل */
+}
+
+a:hover {
+  color: #0056b3; /* لون الرابط عند التحويل */
+}
+
+
+
+
+
+
+
+    .sidebar-left, .sidebar-right {
+      width: 15%;
+      height: auto;
+      margin: 2px;
+  background-color: #d0d0d0; /* لون ال side-left */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* ظل لل side-left */
+color :#ffffff ;
+  display: flex;
+  align-items: center; /* توسيط العناصر عموديا */
+  justify-content: center; /* توسيط العناصر أفقيا */
+  padding: 2px;
+    }
+
+    .sidebar-left a, .sidebar-right a {
+      display: block;
+      color: #000;
+      padding: 0px;
+      text-decoration: none;
+    }
+
+    .sidebar-left a.sb-active, .sidebar-right a.sb-active {
+      background-color: rgba(0, 0, 0, 0.4);
+      color: #f0fff0;
+    }
+
+    .sidebar-left a:hover:not(.sb-active), .sidebar-right a:hover:not(.sb-active) {
+      background-color: rgba(0, 0, 0, 0.2);
+      color: #f0fff0;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 15% 70% 15%;
+      grid-template-rows: auto auto auto;
+      gap: 20px;
+    }
+
+.main-content {
+  border: var(--bdr2);
+  background-color: rgba(255, 255, 255, 0.6); /* استخدام قيمة للشفافية هنا (0.9) */
+  padding-top: 60px;
+ 
+}
+
+.sidebar-container-left, .sidebar-container-right {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5; /* لون خلفية رصاصي فضي يشبه الأبيض بلمس */
+  border-radius: 5px;
+  padding: 0px;
+  margin: 10px;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2); /* ظل داخلي يظهر التجسيم */
+}
+
+.sidebar-container-left h2, .sidebar-container-right h2 {
+  background-color: #f5f5f5; /* لون خلفية ال h2 أقرب إلى الفضي الأبيض */
+  color: #336699; /* لون النص */
+  font-size: 18px; /* حجم النص */
+  font-weight: bold; /* سمك النص */
+  text-align: center;
+  padding: 10px;
+  border-top-left-radius: 5px; /* تدوير الزوايا */
+  border-top-right-radius: 5px; /* تدوير الزوايا */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* ظل لل h2 */
+  margin: 0; /* إزالة هامش أعلى وأسفل */
+}
+    @media screen and (max-width: 600px) {
+      main {
+        grid-template-columns: 1fr;
+        
+      }
+
+      .main-content {
+        order: -1;
+      }
+
+      .sidebar-left, .sidebar-right {
+        width: 100%;
+        margin: 2px 0;
+      }
+    }
+
+    .fa {
+      padding: 1rem;
+      font-size: 30px;
+      width: 50px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      text-shadow: -1px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+      color: #ffffed;
+    }
+
+    .fa:hover {
+      background-color: rgba(0, 0, 0, 0.14);
+    }
+    
+    
+    
+    
+    
+.container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* عرض صورة واحدة في وضع الهاتف */
+      gap: 10px;
+    }
+
+    .item {
+      text-align: center;
+    }
+
+    .item img {
+      width: 150px; /* جعل حجم الصور موحدة داخل الـ class */
+      height: 200px;
+    }
+
+.text {
+      font-size: 16px; /* حجم النص */
+      width: 150px; 
+      height: 80px; /* طول النص بأربعة أسطر */
+      overflow: hidden; /* للتأكد من عرض متساوٍ للنصوص */
+      white-space: normal;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+
+    @media screen and (min-width: 600px) {
+      .container {
+        grid-template-columns: repeat(4, 1fr); /* عرض 4 صور في وضع الحاسوب */
+      }
+    }
+  @media screen and (max-width: 600px) {
+  .container {
+    grid-template-columns: 1fr; /* عرض صورة واحدة في وضع الهاتف */
+  }
+
+  .item img {
+    width: 98%; /* جعل الصور تأخذ عرض كامل في وضع الهاتف */
+    height: auto; /* ضمان الحفاظ على نسبة العرض إلى الارتفاع */
+    
+  }
+
+  .text {
+    font-size: 16px; /* تصغير حجم النص في وضع الهاتف */
+    width: 100%; /* جعل عرض النص كاملاً في وضع الهاتف */
+    height: auto; /* السماح للنص بالتوسع عمودياً في وضع الهاتف */
+    overflow: hidden; /* تجنب ظهور النص خارج الحاوية */
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* عرض النص على أقل من أو يساوي 4 أسطر */
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis; /* في حالة تجاوز النص عدد الأسطر */
+  }
+}
+
+
+
+
+
+.Lately {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  position: relative;
+  margin-bottom: 20px;
+  overflow: hidden; /* لضمان عدم تجاوز الشعاع خارج الصورة */
+  transition: all 0.3s ease; /* تطبيق التأثيرات بسلاسة */
+}
+
+.image-container img {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  filter: brightness(50%) saturate(0) hue-rotate(220deg) blur(0px); /* تحويل لون الصورة إلى لون مظلم غامق جدًا */
+}
+
+.image-container p {
+  color: #000000; /* تغيير لون النص */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  text-align: center;
+  background-color: rgba(180, 138, 255, 0.2); /* لون بنفسجي فاتح مع شفافية */
+  color :#fff ;
+  padding: 5px;
+  z-index: 2; /* تأكيد ظهور النص فوق الشعاع */
+  transition: all 0.3s ease; /* تطبيق التأثيرات بسلاسة */
+  width: 100%; /* عرض النص 100% */
+  max-height: 2.6em; /* حدد النص إلى سطرين فقط */
+  overflow: hidden; /* لتجنب التمدد خارج الحاوية */
+  white-space: nowrap; /* لمنع السطر التالي */
+  text-overflow: ellipsis; /* عرض نقط الانقطاط في حالة التمدد */
+}
+.image-container::before {
+  content: "";
+  position: absolute;
+  width: 100%; /* توسيع الشعاع ليمتد خارج الصورة بشكل جيد */
+  height: 300%; /* توسيع الشعاع ليمتد خارج الصورة بشكل جيد */
+  background: linear-gradient(to right, transparent 11%, lightblue 99.33%, lightblue 99.67%, transparent 66.67%); /* تأثير شعاع أزرق داخل الصورة */
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%) rotate(-45deg); /* تدوير الشعاع */
+  transition: all 0.3s ease; /* تطبيق التأثيرات بسلاسة */
+  opacity: 0.4; /* تحديد شفافية الشعاع */
+}
+
+.image-container:hover {
+  transform: scale(1.05); /* تكبير العنصر عند تحويل المؤشر */
+}
+
+.image-container:hover img {
+  filter: brightness(100%) saturate(100%) hue-rotate(0) blur(0); /* إلغاء تأثيرات الصورة عند تحويل المؤشر */
+}
+
+
+
+  .social-icons {
+    width :100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    font-size :12px ;
+    font-size-adjust:100%;
+  }
+
+  .social-icons a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.3s ease;
+  }
+
+  .social-icons a:hover {
+    transform: translateY(-5px);
+  }
+
+  .social-icons img {
+    width: 40px;
+    margin-top: 20px;
+    height: 60px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  
+  
+  
+  
+
+.forum {
+  width: 100%;
+  margin: 0 auto;
+  padding: 2px;
+  text-align: center;
+  animation: fadeInUp 1s ease;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  margin: 5px 0;
+}
+
+.forum-icon {
+  font-size: 16px;
+  color:#7390AB;
+}
+
+.forum-title {
+  font-size: 14px;
+  margin-top: 5px;
+  width: 100%;
+  direction: rtl;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.forum:hover {
+  background-color :  #7375AB; /* لون بنفسجي للتحديد عند التحوي */
+  color:#ffffff;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
